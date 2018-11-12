@@ -16,6 +16,10 @@ import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-dire
 import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeService } from './depedency-injection-service/employee.service';
+import { DepedencyInjectionServiceComponent } from './depedency-injection-service/depedency-injection-service.component';
+import { EmployeeListComponent } from './depedency-injection-service/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './depedency-injection-service/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +35,19 @@ import { PipesComponent } from './pipes/pipes.component';
     NgSwitchDirectiveComponent,
     NgForDirectiveComponent,
     ComponentInteractionComponent,
-    PipesComponent
+    PipesComponent,
+    DepedencyInjectionServiceComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
