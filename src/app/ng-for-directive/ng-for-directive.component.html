@@ -1,0 +1,14 @@
+<h2 class="ng-for-directive">[From NgForDirectiveComponent]: ng-for-directive works!</h2>
+
+<div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e">
+  <h2 class="ng-for-directive">
+    [Last:{{l}}] - 
+    [First:{{f}}] - 
+    [Index:{{i}}] - 
+    {{color}} - 
+    [Odd:{{o}}] -
+    [Even:{{e}}]
+  </h2>
+</div>
+
+<hr />
