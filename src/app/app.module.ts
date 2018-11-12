@@ -11,6 +11,7 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVariablesComponent } from './template-reference-variables/template-reference-variables.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { NgifDirectiveComponent } from './ngif-directive/ngif-directive.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     EventBindingComponent,
     TemplateReferenceVariablesComponent,
     TwoWayBindingComponent,
+    NgifDirectiveComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+<h2 class="ngif-directive">[From NgIfDirectiveComponent]: ngif-directive works!</h2>
+
+<button (click)="toggle()">Toggle</button>
+<h2 *ngIf="displayName; else elseBlock" class="ngif-directive">h2 tag is visible</h2>
+<ng-template #elseBlock>
+  <h2 class="ngif-directive">h2 tag is hidden</h2>
+</ng-template>
+
+
+<button (click)="toggle2()">Toggle2</button>
+<div *ngIf="displayName2; then thenBlock2; else elseBlock2"></div>
+<ng-template #thenBlock2>
+    <h2 class="ngif-directive">visible</h2>  
+</ng-template>
+
+<ng-template #elseBlock2>
+    <h2 class="ngif-directive">hidden</h2>  
+</ng-template>
+
+<hr />
