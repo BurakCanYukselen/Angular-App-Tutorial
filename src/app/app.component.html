@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Angular App Tutorial
-  </h1>
+  <h1> Angular App Tutorial </h1>
+  <h1> {{message}} </h1>
 </div>
 
+<app-component-interaction (childEvent)="message=$event" [data]="name"></app-component-interaction>
 <app-ng-for-directive></app-ng-for-directive>
 <app-ng-switch-directive></app-ng-switch-directive>
 <app-ngif-directive></app-ngif-directive>
