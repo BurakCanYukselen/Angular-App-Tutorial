@@ -7,12 +7,12 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class ComponentInteractionComponent implements OnInit {
   constructor() { }
+
+  @Input('data') public name = '';
+  @Output() public childEvent = new EventEmitter();
   ngOnInit() { }
 
-  @Input('data') public name: string = "";
-  @Output() public childEvent = new EventEmitter();
-
   fireEvent() {
-    this.childEvent.emit("Hello app-component from child");
+    this.childEvent.emit('Hello app-component from child');
   }
 }

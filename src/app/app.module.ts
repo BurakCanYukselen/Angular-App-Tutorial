@@ -20,34 +20,42 @@ import { EmployeeService } from './depedency-injection-service/employee.service'
 import { DepedencyInjectionServiceComponent } from './depedency-injection-service/depedency-injection-service.component';
 import { EmployeeListComponent } from './depedency-injection-service/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './depedency-injection-service/employee-detail/employee-detail.component';
+import { HTTPObservablesComponent } from './HTTP-Observables/HTTP-Observables.component';
+import { HTTPService } from './HTTP-Observables/HTTP.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TestComponent,
-    PropertyBindingComponent,
-    ClassBindingComponent,
-    StyleBindingComponent,
-    EventBindingComponent,
-    TemplateReferenceVariablesComponent,
-    TwoWayBindingComponent,
-    NgifDirectiveComponent,
-    NgSwitchDirectiveComponent,
-    NgForDirectiveComponent,
-    ComponentInteractionComponent,
-    PipesComponent,
-    DepedencyInjectionServiceComponent,
-    EmployeeListComponent,
-    EmployeeDetailComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [
-    EmployeeService,
-  ],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      TestComponent,
+      PropertyBindingComponent,
+      ClassBindingComponent,
+      StyleBindingComponent,
+      EventBindingComponent,
+      TemplateReferenceVariablesComponent,
+      TwoWayBindingComponent,
+      NgifDirectiveComponent,
+      NgSwitchDirectiveComponent,
+      NgForDirectiveComponent,
+      ComponentInteractionComponent,
+      PipesComponent,
+      DepedencyInjectionServiceComponent,
+      EmployeeListComponent,
+      EmployeeDetailComponent,
+      HTTPObservablesComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      HttpClientModule
+   ],
+   providers: [
+      EmployeeService,
+      HTTPService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
