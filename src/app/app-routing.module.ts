@@ -8,6 +8,10 @@ import { RoutingParameterDepartmentListComponent } from './routing-navigation/ro
 // tslint:disable-next-line:max-line-length
 import { RoutingParameterDepartmentDetailComponent } from './routing-navigation/routing-parameter-department-list/routing-parameter-department-detail/routing-parameter-department-detail.component';
 // tslint:disable-next-line:max-line-length
+import { RoutingOptionalParameterDepartmentListComponent } from './routing-navigation/routing-optional-parameter-department-list/routing-optional-parameter-department-list.component';
+// tslint:disable-next-line:max-line-length
+import { RoutingOptionalParameterDepartmentDetailComponent } from './routing-navigation/routing-optional-parameter-department-list/routing-optional-parameter-department-detail/routing-optional-parameter-department-detail.component';
+// tslint:disable-next-line:max-line-length
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -15,6 +19,8 @@ const routes: Routes = [
   { path: 'employees', component: RoutingEmployeeListComponent },
   { path: 'parameter-departments', component: RoutingParameterDepartmentListComponent },
   { path: 'parameter-departments/:id', component: RoutingParameterDepartmentDetailComponent },
+  { path: 'parameter-optional-departments', component: RoutingOptionalParameterDepartmentListComponent },
+  { path: 'parameter-optional-departments/:id', component: RoutingOptionalParameterDepartmentDetailComponent },
   { path: '**', component: RoutingPagenotfoundComponent } // must be at bottom
 ];
 
@@ -29,5 +35,7 @@ export const RoutingComponents =
     RoutingEmployeeListComponent,
     RoutingParameterDepartmentListComponent,
     RoutingParameterDepartmentDetailComponent,
+    RoutingOptionalParameterDepartmentListComponent,
+    RoutingOptionalParameterDepartmentDetailComponent,
     RoutingPagenotfoundComponent,
   ];
