@@ -16,6 +16,14 @@ import { RoutingRelativeNavigationDepartmentDetailComponent } from './routing-na
 // tslint:disable-next-line:max-line-length
 import { RoutingRelativeNavigationDepartmentListComponent } from './routing-navigation/routing-relative-navigation-department-list/routing-relative-navigation-department-list.component';
 // tslint:disable-next-line:max-line-length
+import { RoutingChildRoutesDepartmentListComponent } from './routing-navigation/routing-child-routes-department-list/routing-child-routes-department-list.component';
+// tslint:disable-next-line:max-line-length
+import { RoutingChildRoutesDepartmentDetailComponent } from './routing-navigation/routing-child-routes-department-list/routing-child-routes-department-detail/routing-child-routes-department-detail.component';
+// tslint:disable-next-line:max-line-length
+import { RoutingChildRoutesDepartmentOverviewComponent } from './routing-navigation/routing-child-routes-department-list/routing-child-routes-department-overview/routing-child-routes-department-overview.component';
+// tslint:disable-next-line:max-line-length
+import { RoutingChildRoutesDepartmentContactComponent } from './routing-navigation/routing-child-routes-department-list/routing-child-routes-department-contact/routing-child-routes-department-contact.component';
+// tslint:disable-next-line:max-line-length
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -27,6 +35,15 @@ const routes: Routes = [
   { path: 'parameter-optional-departments/:id', component: RoutingOptionalParameterDepartmentDetailComponent },
   { path: 'relative-navigation-departments', component: RoutingRelativeNavigationDepartmentListComponent },
   { path: 'relative-navigation-departments/:id', component: RoutingRelativeNavigationDepartmentDetailComponent },
+  { path: 'child-routes-departments', component: RoutingChildRoutesDepartmentListComponent },
+  {
+    path: 'child-routes-departments/:id',
+    component: RoutingChildRoutesDepartmentDetailComponent,
+    children: [
+      { path: 'overview', component: RoutingChildRoutesDepartmentOverviewComponent },
+      { path: 'contact', component: RoutingChildRoutesDepartmentContactComponent },
+    ]
+  },
   { path: '**', component: RoutingPagenotfoundComponent } // must be at bottom
 ];
 
@@ -45,5 +62,9 @@ export const RoutingComponents =
     RoutingOptionalParameterDepartmentDetailComponent,
     RoutingRelativeNavigationDepartmentListComponent,
     RoutingRelativeNavigationDepartmentDetailComponent,
+    RoutingChildRoutesDepartmentListComponent,
+    RoutingChildRoutesDepartmentDetailComponent,
+    RoutingChildRoutesDepartmentOverviewComponent,
+    RoutingChildRoutesDepartmentContactComponent,
     RoutingPagenotfoundComponent,
   ];

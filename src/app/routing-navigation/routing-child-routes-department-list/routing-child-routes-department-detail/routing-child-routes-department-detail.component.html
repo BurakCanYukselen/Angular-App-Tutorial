@@ -1,0 +1,13 @@
+<h2 class="routing-navigation">[From RoutingChikdRoutesDepartmentDetailComponent]:
+  routing-child-routes-department-detail works!</h2>
+
+<h2 class="routing-navigation"> Selected department with id = {{departmentId}} </h2>
+
+<h2 class="routing-navigation"><button (click)="showOverview()">Overview</button></h2>
+<h2 class="routing-navigation"><button (click)="showContact()">Contact</button></h2>
+
+<router-outlet></router-outlet>
+
+<h2 class="routing-navigation clickable"><button (click)="goPrevious()">Previous</button></h2>
+<h2 class="routing-navigation clickable"><button (click)="goNext()">Next</button></h2>
+<h2 class="routing-navigation clickable"><button (click)="goToDepartments()">Back</button></h2>

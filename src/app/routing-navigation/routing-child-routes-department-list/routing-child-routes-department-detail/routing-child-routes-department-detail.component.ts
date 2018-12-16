@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
-  selector: 'app-routing-relative-navigation-department-detail',
-  templateUrl: './routing-relative-navigation-department-detail.component.html',
-  styleUrls: ['./routing-relative-navigation-department-detail.component.scss']
+  selector: 'app-routing-child-routes-department-detail',
+  templateUrl: './routing-child-routes-department-detail.component.html',
+  styleUrls: ['./routing-child-routes-department-detail.component.scss']
 })
 
-export class RoutingRelativeNavigationDepartmentDetailComponent implements OnInit {
+export class RoutingChildRoutesDepartmentDetailComponent implements OnInit {
   constructor(private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   public departmentId: any;
@@ -21,16 +21,24 @@ export class RoutingRelativeNavigationDepartmentDetailComponent implements OnIni
 
   public goPrevious() {
     const previousId = this.departmentId - 1;
-    this._router.navigate(['/relative-navigation-departments', previousId]);
+    this._router.navigate(['/child-routes-departments', previousId]);
   }
 
   public goNext() {
     const nextId = this.departmentId + 1;
-    this._router.navigate(['/relative-navigation-departments', nextId]);
+    this._router.navigate(['/child-routes-departments', nextId]);
   }
 
   public goToDepartments() {
     const selectedId = this.departmentId ? this.departmentId : null;
     this._router.navigate(['../', { id: selectedId }], { relativeTo: this._activatedRoute });
+  }
+
+  public showOverview() {
+    this._router.navigate(['overview'], { relativeTo: this._activatedRoute });
+  }
+
+  public showContact() {
+    this._router.navigate(['contact'], { relativeTo: this._activatedRoute });
   }
 }
