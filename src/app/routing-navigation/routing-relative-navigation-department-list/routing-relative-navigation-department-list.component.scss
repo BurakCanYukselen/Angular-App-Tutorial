@@ -1,0 +1,10 @@
+@import 'src/app/routing-navigation/routing-navigation.component.scss';
+
+.clickable {
+  cursor: pointer;
+}
+
+.selected {
+  color: white;
+  background-color: blueviolet;
+}

@@ -12,6 +12,10 @@ import { RoutingOptionalParameterDepartmentListComponent } from './routing-navig
 // tslint:disable-next-line:max-line-length
 import { RoutingOptionalParameterDepartmentDetailComponent } from './routing-navigation/routing-optional-parameter-department-list/routing-optional-parameter-department-detail/routing-optional-parameter-department-detail.component';
 // tslint:disable-next-line:max-line-length
+import { RoutingRelativeNavigationDepartmentDetailComponent } from './routing-navigation/routing-relative-navigation-department-list/routing-relative-navigation-department-detail/routing-relative-navigation-department-detail.component';
+// tslint:disable-next-line:max-line-length
+import { RoutingRelativeNavigationDepartmentListComponent } from './routing-navigation/routing-relative-navigation-department-list/routing-relative-navigation-department-list.component';
+// tslint:disable-next-line:max-line-length
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -21,6 +25,8 @@ const routes: Routes = [
   { path: 'parameter-departments/:id', component: RoutingParameterDepartmentDetailComponent },
   { path: 'parameter-optional-departments', component: RoutingOptionalParameterDepartmentListComponent },
   { path: 'parameter-optional-departments/:id', component: RoutingOptionalParameterDepartmentDetailComponent },
+  { path: 'relative-navigation-departments', component: RoutingRelativeNavigationDepartmentListComponent },
+  { path: 'relative-navigation-departments/:id', component: RoutingRelativeNavigationDepartmentDetailComponent },
   { path: '**', component: RoutingPagenotfoundComponent } // must be at bottom
 ];
 
@@ -37,5 +43,7 @@ export const RoutingComponents =
     RoutingParameterDepartmentDetailComponent,
     RoutingOptionalParameterDepartmentListComponent,
     RoutingOptionalParameterDepartmentDetailComponent,
+    RoutingRelativeNavigationDepartmentListComponent,
+    RoutingRelativeNavigationDepartmentDetailComponent,
     RoutingPagenotfoundComponent,
   ];

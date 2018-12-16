@@ -1,0 +1,5 @@
+<h2 class="routing-navigation">[From RoutingRelativeNavigationDepartmentListComponent]:
+  routing-relative-navigation-department-list works!</h2>
+
+<h2 class="routing-navigation clickable" (click)="onSelect(department)" [class.selected]="isSelected(department)" *ngFor="let department of departments">{{department.id}}
+  - {{department.name}}</h2>
