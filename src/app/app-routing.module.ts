@@ -6,7 +6,8 @@ import { RoutingPagenotfoundComponent } from './routing-navigation/routing-pagen
 // tslint:disable-next-line:max-line-length
 import { RoutingParameterDepartmentListComponent } from './routing-navigation/routing-parameter-department-list/routing-parameter-department-list.component';
 // tslint:disable-next-line:max-line-length
-import { RoutingParameterDepartmentDetailComponent } from './routing-navigation/routing-parameter-department-detail/routing-parameter-department-detail.component';
+import { RoutingParameterDepartmentDetailComponent } from './routing-navigation/routing-parameter-department-list/routing-parameter-department-detail/routing-parameter-department-detail.component';
+// tslint:disable-next-line:max-line-length
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },

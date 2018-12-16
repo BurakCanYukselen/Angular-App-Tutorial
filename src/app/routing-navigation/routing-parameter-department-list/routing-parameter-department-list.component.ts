@@ -20,7 +20,7 @@ export class RoutingParameterDepartmentListComponent implements OnInit {
 
   ngOnInit() { }
 
-  public onSelect(_department) {
+  public onSelect(_department: { id: any; }) {
     this._router.navigate(['/parameter-departments', _department.id]);
   }
 }
